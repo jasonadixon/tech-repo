@@ -1,10 +1,15 @@
 package net.dixonlabs.technologyrepository;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 import org.springframework.data.annotation.Id;
 
 public class Person {
 
-	@Id private String id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private String id;
 
 	private String firstName;
 	private String lastName;
